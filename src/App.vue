@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid">
+        <TheHeader/>
+        <div class="row mt-4">
+            <TheCategories/>
+            <div class="col-12 col-md-10 mt-4 mt-md-0">
+                <RouterView/>
+            </div>
+        </div>
+    </div>
+    <TheFooter/>
 </template>
 
+<style></style>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "@/components/layout/TheHeader.vue";
+import TheCategories from "@/components/layout/TheCategories.vue";
+import TheFooter from "@/components/layout/TheFooter.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    name: "App",
+    components: {
+        TheHeader,
+        TheCategories,
+        TheFooter,
+    },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
